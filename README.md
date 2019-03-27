@@ -1,4 +1,4 @@
-# p1
+# Vue.JS Web Toolkit
 
 ## Project setup
 ```
