@@ -1,5 +1,5 @@
 <template>
-  <button class='btn' v-bind:class="[ type ? `btn-${type}` : '' ]"  @click="onClick">
+  <button class='btn' v-bind:class="[className, color ? (outline ? `btn-outline-${color}` : `btn-${color}`) : 'btn-primary' ]"  @click="onClick">
     <slot></slot>
   </button>
 </template>
@@ -9,7 +9,9 @@ export default {
   name: 'Button',
   props: {
     msg: String,
-    type: String
+    color: String,
+    className: String,
+    outline: Boolean
   },
   methods: {
     onClick() {
